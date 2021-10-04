@@ -19,10 +19,16 @@ namespace CrossBrowserAmazon
 
         [Test]
         [TestCaseSource("BrowserToRunWith")]
-        public void LoginIntoFacebook(string browsername)
+        public void TestForLoginPage(string browsername)
         {
             BrowserTestMethod(browsername);
             Login.LoginPage.LoginPageBrowserTest();
+        }
+
+        [Test]
+        public void TestForProductAndRating()
+        {
+            ProductsAndRatings.ProductAndRatingAction.GetProductAndRating();
         }
     }
 }
