@@ -9,6 +9,14 @@ namespace CrossBrowserAmazon.Base
     {
         
         public static IWebDriver driver;
+
+        [SetUp]
+        public void Setup()
+        {
+             driver = new ChromeDriver();
+            driver.Url = "https://www.amazon.in/";
+
+        }
         public void BrowserTestMethod(string browsername)
         {
             if (browsername.Equals("firefox"))
